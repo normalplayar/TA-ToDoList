@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-            <h1>to do list</h1>
+            <h1>To Do List</h1>
             <Router>
                 <Routes>
                     <Route path='/' element={<TodoWrapper />}></Route>

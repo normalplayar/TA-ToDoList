@@ -9,25 +9,32 @@ export const Todo = ({task, toggleComplete, deleteToDo, editToDo}) => {
             <p
                 className={`${task.completed ? 'completed' : ""}`}>{task.task}
             </p>
-
-            <div>
+            <div className="form-check form-check-inline">
                 <input
                     type="checkbox"
+                    className='form-check-input'
                     checked={task.completed}
                     onChange={() => toggleComplete(task.id)}
+                    value={''}
                 />
-                <span className="checkmark"></span>
+            <label>
 
-                <FontAwesomeIcon
+            </label>
+            </div>
+            <div className="form-check form-check-inline">
+                    <FontAwesomeIcon
                     icon={faPenToSquare}
                     onClick={() => editToDo(task.id)}
                 />
-
-                <FontAwesomeIcon
+            </div>
+            <div className="form-check form-check-inline">
+                    <FontAwesomeIcon
                     icon={faTrash}
                     onClick={() => deleteToDo(task.id)}
                 />
             </div>
+
         </div>
+            
     )
 }

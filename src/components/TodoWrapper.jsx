@@ -64,7 +64,7 @@ export const TodoWrapper = () => {
 
     return (
         <div className="TodoWrapper">
-            <button onClick={toggleCompletedFilter}>
+            <button onClick={toggleCompletedFilter} className='btn btn-default'>
                 {showCompleted ? 'Show All' : 'Show Completed'}
             </button>
 
